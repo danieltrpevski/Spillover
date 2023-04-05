@@ -531,11 +531,11 @@ class Spillover_Experiment(e.Experiment):
             ax_vs.set_xlabel('t')
             ax_vs.plot(self.tv, self.vs)
             
-            fig_cai_soma = plt.figure()
-            ax_cai_soma = fig_cai_soma.add_subplot(111)
-            ax_cai_soma.set_ylabel('soma cai')
-            ax_cai_soma.set_xlabel('t')
-            ax_cai_soma.plot(self.tout, self.cai_soma)
+#            fig_cai_soma = plt.figure()
+#            ax_cai_soma = fig_cai_soma.add_subplot(111)
+#            ax_cai_soma.set_ylabel('soma cai')
+#            ax_cai_soma.set_xlabel('t')
+#            ax_cai_soma.plot(self.tout, self.cai_soma)
             
             fig_vd = plt.figure(); 
             ax_vd = fig_vd.add_subplot(111);
@@ -564,34 +564,34 @@ class Spillover_Experiment(e.Experiment):
 #            for i in range(0,len(self.gk)):
 #                ax_gk.plot(self.tout, self.gk[i])
             
-            fig_cai = plt.figure(); 
-            ax_cai = fig_cai.add_subplot(111);
-            ax_cai.set_ylabel('[Ca]_i')
-            ax_cai.set_xlabel('t')
-            for i in range(0,len(self.cai)):
-                ax_cai.plot(self.tout, self.cai[i])
-            
-            fig_cao = plt.figure(); 
-            ax_cao = fig_cao.add_subplot(111);
-            ax_cao.set_ylabel('[Ca]_o')
-            ax_cao.set_xlabel('t')
-            for i in range(0,len(self.cao)):
-                ax_cao.plot(self.tout, self.cao[i])
-            
-                    
-            fig_cali = plt.figure(); 
-            ax_cali = fig_cali.add_subplot(111);
-            ax_cali.set_ylabel('[Cal]_i')
-            ax_cali.set_xlabel('t')
-            for i in range(0,len(self.cali)):
-                ax_cali.plot(self.tout, self.cali[i])
-
-            fig_cai_nmda = plt.figure(); 
-            ax_cai_nmda = fig_cai_nmda.add_subplot(111);
-            ax_cai_nmda.set_ylabel('[Ca]_NMDA')
-            ax_cai_nmda.set_xlabel('t')
-            for i in range(0,len(self.cai_nmda)):
-                ax_cai_nmda.plot(self.tout, self.cai_nmda[i])
+#            fig_cai = plt.figure(); 
+#            ax_cai = fig_cai.add_subplot(111);
+#            ax_cai.set_ylabel('[Ca]_i')
+#            ax_cai.set_xlabel('t')
+#            for i in range(0,len(self.cai)):
+#                ax_cai.plot(self.tout, self.cai[i])
+#            
+#            fig_cao = plt.figure(); 
+#            ax_cao = fig_cao.add_subplot(111);
+#            ax_cao.set_ylabel('[Ca]_o')
+#            ax_cao.set_xlabel('t')
+#            for i in range(0,len(self.cao)):
+#                ax_cao.plot(self.tout, self.cao[i])
+#            
+#                    
+#            fig_cali = plt.figure(); 
+#            ax_cali = fig_cali.add_subplot(111);
+#            ax_cali.set_ylabel('[Cal]_i')
+#            ax_cali.set_xlabel('t')
+#            for i in range(0,len(self.cali)):
+#                ax_cali.plot(self.tout, self.cali[i])
+#
+#            fig_cai_nmda = plt.figure(); 
+#            ax_cai_nmda = fig_cai_nmda.add_subplot(111);
+#            ax_cai_nmda.set_ylabel('[Ca]_NMDA')
+#            ax_cai_nmda.set_xlabel('t')
+#            for i in range(0,len(self.cai_nmda)):
+#                ax_cai_nmda.plot(self.tout, self.cai_nmda[i])
 
 
             if self.cell.spines != []:
@@ -609,49 +609,49 @@ class Spillover_Experiment(e.Experiment):
                 for i in range(0,len(self.ica)):
                     ax_ica.plot(self.tout, self.ica[i])
 
-                fig_cai_nmda_spine = plt.figure(); 
-                ax_cai_nmda_spine = fig_cai_nmda_spine.add_subplot(111);
-                ax_cai_nmda_spine.set_ylabel('spine [Ca]_NMDA')
-                ax_cai_nmda_spine.set_xlabel('t')
-                for i in range(0,len(self.cai_nmda_spine)):
-                    ax_cai_nmda_spine.plot(self.tout, self.cai_nmda_spine[i])                    
-
-                fig_cai_spine = plt.figure(); 
-                ax_cai_spine = fig_cai_spine.add_subplot(111);
-                ax_cai_spine.set_ylabel('spine [Ca]')
-                ax_cai_spine.set_xlabel('t')
-                for i in range(0,len(self.cai_spine)):
-                    ax_cai_spine.plot(self.tout, self.cai_spine[i])
-
-                fig_cati_spine = plt.figure(); 
-                ax_cati_spine = fig_cati_spine.add_subplot(111);
-                ax_cati_spine.set_ylabel('spine [Cat]')
-                ax_cati_spine.set_xlabel('t')
-                for i in range(0,len(self.cai_spine)):
-                    ax_cati_spine.plot(self.tout, self.cati_spine[i])            
-
-                fig_cali_spine = plt.figure(); 
-                ax_cali_spine = fig_cali_spine.add_subplot(111);
-                ax_cali_spine.set_ylabel('spine [Cal]')
-                ax_cali_spine.set_xlabel('t')
-                for i in range(0,len(self.cali_spine)):
-                    ax_cali_spine.plot(self.tout, self.cali_spine[i])
-
-                fig_cali_dend = plt.figure()
-                ax_cali_dend = fig_cali_dend.add_subplot(111)
-                ax_cali_dend.set_ylabel('[Cal]_i dend')
-                ax_cali_dend.set_xlabel('t')
-                for c in self.cali_dend:
-                    ax_cali_dend.plot(self.tout, c)                          
+#                fig_cai_nmda_spine = plt.figure(); 
+#                ax_cai_nmda_spine = fig_cai_nmda_spine.add_subplot(111);
+#                ax_cai_nmda_spine.set_ylabel('spine [Ca]_NMDA')
+#                ax_cai_nmda_spine.set_xlabel('t')
+#                for i in range(0,len(self.cai_nmda_spine)):
+#                    ax_cai_nmda_spine.plot(self.tout, self.cai_nmda_spine[i])                    
+#
+#                fig_cai_spine = plt.figure(); 
+#                ax_cai_spine = fig_cai_spine.add_subplot(111);
+#                ax_cai_spine.set_ylabel('spine [Ca]')
+#                ax_cai_spine.set_xlabel('t')
+#                for i in range(0,len(self.cai_spine)):
+#                    ax_cai_spine.plot(self.tout, self.cai_spine[i])
+#
+#                fig_cati_spine = plt.figure(); 
+#                ax_cati_spine = fig_cati_spine.add_subplot(111);
+#                ax_cati_spine.set_ylabel('spine [Cat]')
+#                ax_cati_spine.set_xlabel('t')
+#                for i in range(0,len(self.cai_spine)):
+#                    ax_cati_spine.plot(self.tout, self.cati_spine[i])            
+#
+#                fig_cali_spine = plt.figure(); 
+#                ax_cali_spine = fig_cali_spine.add_subplot(111);
+#                ax_cali_spine.set_ylabel('spine [Cal]')
+#                ax_cali_spine.set_xlabel('t')
+#                for i in range(0,len(self.cali_spine)):
+#                    ax_cali_spine.plot(self.tout, self.cali_spine[i])
+#
+#                fig_cali_dend = plt.figure()
+#                ax_cali_dend = fig_cali_dend.add_subplot(111)
+#                ax_cali_dend.set_ylabel('[Cal]_i dend')
+#                ax_cali_dend.set_xlabel('t')
+#                for c in self.cali_dend:
+#                    ax_cali_dend.plot(self.tout, c)                          
             
             legend_list = []
             for i in self.dend_record_list:
                 legend_list.append('dend[%d](%.2f) = %.2f um' % (i, p.pos, h.distance(p.pos, sec = self.cell.dendlist[i]) ))
             
 #            ax_vd.legend(legend_list); ax_cai.legend(legend_list); 
-            ax_cali.legend(legend_list); ax_cai_nmda.legend(legend_list);
-            if self.cell.spines != []:
-                ax_cali_dend.legend(legend_list)
+#            ax_cali.legend(legend_list); ax_cai_nmda.legend(legend_list);
+#            if self.cell.spines != []:
+#                ax_cali_dend.legend(legend_list)
 
             plt.show()
 #            return fig_vs, fig_vd, fig_cali, fig_cai_nmda

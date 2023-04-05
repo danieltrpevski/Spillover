@@ -5,12 +5,11 @@ Created on Thu Dec 15 17:48:41 2016
 @author: daniel
 """
 
-from neuron import h, rxd
+from neuron import h
 import d1msn as msn
 import spillover_experiment as se
 import pickle
 import parameters as p
-import numpy as np
 import json 
 
 # --- 1. Create a cell and other useful stuff
@@ -43,14 +42,6 @@ for sec in cell.somalist:
                                       h.distance(1, sec = sec) - h.distance(0, sec = sec),
                                       sec.diam))
 
-for d,start,end in zip(p.independent_dends, p.cluster_start_poss, p.cluster_end_poss):
-    sec = cell.dendlist[d]
-    print(sec.name(), "End = %.2f, Start = %.2f, Length = %.2f, d = %.2f" % (h.distance(end, sec = sec), 
-                                      h.distance(start, sec = sec), 
-                                      h.distance(end, sec = sec) - h.distance(start, sec = sec),
-                                      sec.diam))
-    
-
 # --- 2. Insert stimulation to cell
 
 dend_record_list = [12]
@@ -73,8 +64,8 @@ inhibitory_cluster_dict = {'loc': [53],
 
 ex = se.Spillover_Experiment('record_ca', cell)
 #ex.insert_synapses('noise_SPN')
-ex.insert_synapses('no_spillover', plateau_cluster_list, deterministic = 0, 
-                   num_syns = 1, add_spine = 1, on_spine = 0)
+ex.insert_synapses('my_spillover', plateau_cluster_list, deterministic = 0, 
+                   num_syns = 30, add_spine = 1, on_spine = 0)
 ex.set_up_recording(dend_record_list)
 ex.simulate()
 ex.plot_results()
