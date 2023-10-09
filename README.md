@@ -48,7 +48,7 @@ The results of the simulations are provided in the `results` folder. This includ
 
 ## DOI
 
-The DOI for the publication is DOI: [10.22541/au.168012861.16093883/v1]
+The DOI for the publication is DOI: [10.3389/fncel.2023.1196182]
 
 ## License
 
